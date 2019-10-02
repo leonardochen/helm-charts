@@ -27,6 +27,7 @@ spec:
   - name: {{ .Values.service.transportPortName | default "transport" }}
     protocol: TCP
     port: {{ .Values.transportPort }}
+{{ toYaml .Values.service | indent 2 }}
 ---
 kind: Service
 apiVersion: v1
